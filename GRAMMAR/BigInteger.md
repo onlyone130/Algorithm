@@ -34,7 +34,7 @@ System.out.println("Sum: " + sum);
 ```
 
 
-## Int
+## Integer
 
 ##### 범위(Range)
 
@@ -63,5 +63,5 @@ System.out.println("Sum: " + sum);
 int a = 20;
 int b = 30;
 int sum = a+b;
-System.out.println("Sun: " + sum);
+System.out.println("Sum: " + sum);
 ```
