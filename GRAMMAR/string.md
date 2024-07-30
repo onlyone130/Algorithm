@@ -1,8 +1,8 @@
-### Java에서의 문자열 분리
+### Java에서의 문자열 분리 (3)
 
 1. 'split()' 메서드를 사용한 문자열 분리
 
-',' 를 기준으로 문자열을 분리하여 배열로 반환한다. 각 요소는 for 루프를 통해 출력된다.
+* ',' 를 기준으로 문자열을 분리하여 배열로 반환한다. 각 요소는 for 루프를 통해 출력된다.
 
 ```java
 public class SplitExample {
@@ -19,9 +19,9 @@ public class SplitExample {
 
 2. 'StringTokenizer' 클래스를 이용한 문자열 분리
 
-지정된 구분자를 기준으로 문자열을 분리한다. 
+* 지정된 구분자를 기준으로 문자열을 분리한다. 
 
-hasMoreTokens() 메서드로 다음 토큰이 있는지 확인하고, nextToken() 메서드로 다음 토큰을 가져온다.
+* hasMoreTokens() 메서드로 다음 토큰이 있는지 확인하고, nextToken() 메서드로 다음 토큰을 가져온다.
 
 ```java
 import java.util.StringTokenizer;
@@ -41,9 +41,9 @@ public class StringTokenizerExample {
 
 3. 'Scanner' 클래스를 이용한 문자열 분리
 
-기본적으로 공백을 기준으로 문자열을 분리한다. 
+* 기본적으로 공백을 기준으로 문자열을 분리한다. 
 
-hasNext() 메서드로 다음 토큰이 있는지 확인하고, next() 메서드로 다음 토큰을 가져온다.
+* hasNext() 메서드로 다음 토큰이 있는지 확인하고, next() 메서드로 다음 토큰을 가져온다.
 
 ```java
 import java.util.Scanner;
@@ -65,9 +65,9 @@ public class ScannerExample {
 
 4. 'Pattern' 클래스를 이용한 문자열 분리
 
-'Pattern' 클래스의 split() 메서드를 사용하여 정규 표현식에 따라 문자열을 분리할 수 있다. 
+* 'Pattern' 클래스의 split() 메서드를 사용하여 정규 표현식에 따라 문자열을 분리할 수 있다. 
 
-이 방법은 정규 표현식을 사용할 때 유용하게 쓰인다.
+* 이 방법은 정규 표현식을 사용할 때 유용하게 쓰인다.
 
 ```java
 import java.util.regex.Pattern;
