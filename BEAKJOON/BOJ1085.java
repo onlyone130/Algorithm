@@ -13,6 +13,7 @@ public class Main {
         int w = Integer.parseInt(st.nextToken());
         int h = Integer.parseInt(st.nextToken());
 
+        //거리의 최솟값 구하기
         int d = Math.min(Math.min(x, y), Math.min(w - x, h - y));
 
         System.out.println(d);
