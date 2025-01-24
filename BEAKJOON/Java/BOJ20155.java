@@ -17,7 +17,7 @@ public class BOJ20155 {
         st = new StringTokenizer(br.readLine());
         for(int i=0;i<n;i++){
             int a = Integer.parseInt(st.nextToken());
-            ary[i]++;
+            ary[a]++;
         }
         int sum = 0;
         for(int i=0;i<=m;i++){
