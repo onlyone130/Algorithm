@@ -3,9 +3,7 @@
 
 #include <iostream>
 
-const int NMAX = 1001010;
-const int MOD = 998244353;
-const long LINF = 1e18;
+const int NMAX = 11010;
 
 int A[NMAX];
 int cnt[NMAX];
@@ -13,22 +11,30 @@ int cnt[NMAX];
 void solve(){
     int n,k;
     std::cin >> n >> k;
-    for (int i = 0; i <= n; i++){
+    for (int i = 1; i <= n; i++){
         std::cin >> A[i];
     }
-    int l=1, r=0;
-    int ans = 0;
-    while (r<n){
-        r++;
-        cnt[A[r]]++;
-        //내가 입력한 수가 k개 초과로 나왔는지 검사해야함.
-        while (cnt[A[r]]>k){
-            //cnt에 있는 l을 하나 빼주고
-            cnt[A[l]]--;
-            //l을 하나 늘려준다.
-            l++;
+    int l=1, r=1;
+    int ans = 0, sum = A[1];
+    while (r<=n){
+        if (sum >= k) {
+            if (l <= n){
+                if (A[l] >= 0 && A[l] < NMAX) cnt[A[l]]--;
+                sum -= A[l];
+                l++;
+            }
+        } 
+        else {
+            if (r<n){
+                r++;
+                sum += A[r];
+                if (A[r] < NMAX) cnt[A[r]]++;
+            } 
+            else break; 
+            
         }
-        ans = std::max(ans, r-l+1);
+        
+        if (sum == k) ans++;
     }
     std::cout << ans << std::endl;
 }
