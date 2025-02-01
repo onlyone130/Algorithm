@@ -1,7 +1,8 @@
 import java.io.IOException;
 import java.util.Scanner;
 
-public class Main {
+//바구니 뒤집기
+public class BOJ10811 {
     public static void main(String[] args) throws IOException{
         Scanner sc = new Scanner(System.in);
 

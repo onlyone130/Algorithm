@@ -1,6 +1,7 @@
 import java.util.Scanner;
 
-public class Main {
+//심부름 가는 길
+public class BOJ5554 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 

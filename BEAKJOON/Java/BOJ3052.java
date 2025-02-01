@@ -2,7 +2,8 @@ import java.util.HashSet;
 import java.util.Scanner;
 import java.util.Set;
 
-public class Main {
+//나머지
+public class BOJ3052 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         Set<Integer> mySet = new HashSet<>();

@@ -1,5 +1,6 @@
 import java.util.Scanner;
 
+//윤년
 public class BOJ2753{
  
 	public static void main(String[] args) {

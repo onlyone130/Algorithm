@@ -2,7 +2,8 @@
 import java.io.IOException;
 import java.util.Scanner;
 
-public class Main {
+//Hashing
+public class BOJ15829 {
     public static void main(String[] args) throws IOException{
         int r = 31;
         int m = 1234567891;

@@ -2,7 +2,8 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
-public class Main {
+//적록색약
+public class BOJ10026 {
     static boolean[][] visit;
     static char[][] a;
     static int n;

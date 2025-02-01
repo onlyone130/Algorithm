@@ -1,7 +1,8 @@
 import java.io.IOException;
 import java.util.Scanner;
 
-public class Main {
+//별 찍기8
+public class BOJ2445 {
     public static void main(String[] args) throws IOException{
         Scanner sc = new Scanner(System.in);
 

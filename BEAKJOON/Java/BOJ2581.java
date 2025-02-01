@@ -1,7 +1,8 @@
 import java.io.IOException;
 import java.util.Scanner;
 
-public class Main {
+//소수
+public class BOJ2581 {
     public static void main(String[] args) throws IOException{
         int a[] = new int[10001];
         for (int i=2;i<10001;i++){

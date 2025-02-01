@@ -1,7 +1,8 @@
 import java.io.IOException;
 import java.util.Scanner;
 
-public class Main {
+//공 바꾸기
+public class BOJ10813 {
     public static void main(String[] args) throws IOException{
         Scanner sc = new Scanner(System.in);
 
