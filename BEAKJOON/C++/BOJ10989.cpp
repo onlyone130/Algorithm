@@ -1,24 +1,29 @@
 #include <iostream>
 
-int main(){
-    std::ios::sync_with_stdio(false);
-    std::cin.tie(nullptr);
-    int n;
-    std::cin >> n;
+//수 정렬하기3
+using namespace std;
 
-    int cnt[10001] = {0};
-	int n,count;
-	std::cin >> n;
+const int MAX_NUM = 10000; 
 
-	for (int i = 0; i < n; i++)
-	{
-		std::cin >> count;
-		cnt[count]++;
-	}
+int cnt[MAX_NUM + 1] = {0}; 
 
-	for (int i = 1; i < 10001; i++)
-		for (int j = 0; j < cnt[i]; j++)
-			std::cout << i<<'\n';
+int main() {
+    ios::sync_with_stdio(false);
+    cin.tie(nullptr);
 
-	return 0;
+    int n, num;
+    cin >> n;
+
+    for (int i=0; i<n; i++) {
+        cin >> num;
+        cnt[num]++; 
+    }
+
+    for (int i=1; i<=MAX_NUM; i++) {
+        while (cnt[i]--) {  
+            cout << i << '\n';
+        }
+    }
+
+    return 0;
 }
