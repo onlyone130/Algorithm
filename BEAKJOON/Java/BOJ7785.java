@@ -1,6 +1,10 @@
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.HashSet;
+import java.util.List;
 import java.util.StringTokenizer;
 
 public class BOJ7785 {
@@ -8,17 +12,24 @@ public class BOJ7785 {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
        
         int n = Integer.parseInt(br.readLine());
-        String str[][] = new String[n][2];
+
+        HashSet<String> m = new HashSet<>();
         for(int i=0;i<n;i++){
             StringTokenizer st = new StringTokenizer(br.readLine());
-            str[i][0] = st.nextToken();
-            str[i][1] = st.nextToken();
-        }
-        for(int i=0;i<n;i++){
-            if (str[i][0].equals("enter")) {
-                System.out.println(str[0]);
+            String name = st.nextToken();
+            String go = st.nextToken();
+
+            if (go.equals("enter")) {
+                m.add(name);
+            }else {
+                m.remove(name);
             }
         }
-        System.out.println(str[0][0]);
+        List<String> named = new ArrayList<>(m);
+        Collections.sort(named, Collections.reverseOrder());
+
+        for(String name : named){
+            System.out.println(name);
+        }
     }
 }
