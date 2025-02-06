@@ -3,7 +3,7 @@
 //부분합
 using namespace std;
 
-const int NMAX = 10020;
+const int NMAX = 100020;
 
 int arr[NMAX];
 
@@ -18,21 +18,26 @@ int main(){
     for(int i=0;i<n;i++){
         cin >> arr[i];
     }
-    int left = 0, right = 0, sum = 0, cnt = 0;
+    
+    int count = 0, sum = 0, right = 0, min = 0;
 
-    while (right <= n){
-        if(sum<s){
-            sum += arr[right];
-            right++;
-        } else if(sum>s){
-            sum -= arr[left];
-            left++;
-        } else {
-            cnt++;
-            sum -= arr[left];
-            left++;
-        }
-    }
-    cout << cnt << '\n';
+	for (int left=0; left<n; left++) {
+		while (sum < s && right < n) { 
+			sum += arr[right];
+			right++;
+		}
+		if (sum >= s) { 
+			if (left == 0)
+				min = right - left;
+			else {
+				if (right - left < min)
+					min = right - left;
+			}
+		}
+		sum -= arr[left];
+	}
+	
+	cout << min <<'\n';
+
     return 0;
 }
