@@ -8,7 +8,7 @@ public class BOJ2003 {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         StringTokenizer st = new StringTokenizer(br.readLine());
 
-        int m = Integer.parseInt(st.nextToken());
         int n = Integer.parseInt(st.nextToken());
+        int m = Integer.parseInt(st.nextToken());
     }
 }
