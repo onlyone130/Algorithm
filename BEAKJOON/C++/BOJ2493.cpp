@@ -1,30 +1,34 @@
 #include <iostream>
-#include <string>
+#include <algorithm>
+#include <stack>
 
 //탑
 using namespace std;
 
 int main(){
+    ios::sync_with_stdio(false);
+    cin.tie(0);
+    cout.tie(0);
     int n;
     cin >> n;
 
-    stack<pair<int,int>> stk;
+    stack<pair<int,int>> s;
 
     for(int i = 0; i < n; i++){
         int height;
         cin >> height;
 
-        while(!stk.empty()){
-            if(height < stk.top().first){
-                cout << stk.top().second << " ";
-                stk.push(make_pair(height, i+1));
+        while(!s.empty()){
+            if(height < s.top().first){
+                cout << s.top().second << " ";
+                s.push(make_pair(height, i+1));
                 break;
             }
-            stk.pop();
+            s.pop();
         }
-        if(stk.empty()){
+        if(s.empty()){
             cout << "0" << " ";
-            stk.push(make_pair(height, i+1));
+            s.push(make_pair(height, i+1));
         }
     }
     cout << '\n';
