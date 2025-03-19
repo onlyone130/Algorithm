@@ -1,60 +1,66 @@
 #include <iostream>
 #include <string>
 
-const int SIZE = 10000; 
-int stack[SIZE];
-int size = 0; 
+//스택
+using namespace std;
+
+const int SIZE = 10000;
+int s_stack[SIZE];
+int s_size = 0;  
 
 void push(int item) {
-    if (size < SIZE) {
-        stack[size] = item;
-        size++;
+    if (s_size < SIZE) {
+        s_stack[s_size] = item;
+        s_size++;
     }
 }
 
 int pop() {
-    if (size == 0) {
+    if (s_size == 0) {
         return -1; 
     } else {
-        size--;
-        return stack[size];
+        s_size--;
+        return s_stack[s_size];
     }
 }
 
 int s_empty() {
-    return size == 0 ? 1 : 0;
+    return s_size == 0 ? 1 : 0;
 }
 
 int top() {
-    if (size == 0) {
+    if (s_size == 0) {
         return -1; 
     } else {
-        return stack[size - 1];
+        return s_stack[s_size - 1];
     }
 }
 
 int main() {
+    ios::sync_with_stdio(false);
+    cin.tie(NULL);
+    cout.tie(NULL);
+
     int n; 
-    std::cin >> n; 
+    cin >> n; 
 
-    std::string command; 
+    string s; 
     while (n--) {
-        std::cin >> command; 
+        cin >> s; 
 
-        if (command == "push") {
+        if (s == "push") {
             int x;
-            std::cin >> x; 
+            cin >> x; 
             push(x);
-        } else if (command == "pop") {
-            std::cout << pop() << '\n'; 
-        } else if (command == "size") {
-            std::cout << size << '\n'; 
-        } else if (command == "empty") {
-            std::cout << s_empty() << '\n';
-        } else if (command == "top") {
-            std::cout << top() << '\n'; 
+        } else if (s == "pop") {
+            cout << pop() << '\n'; 
+        } else if (s == "size") {
+            cout << s_size << '\n'; 
+        } else if (s == "empty") {
+            cout << s_empty() << '\n';
+        } else if (s == "top") {
+            cout << top() << '\n'; 
         }
     }
-
     return 0;
 }
