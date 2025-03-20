@@ -3,24 +3,27 @@
     #include <queue>
     #include <sstream>
 
+    //큐
+    using namespace std;
+
     int main(){
 
-        std::ios::sync_with_stdio(false);
-        std::cin.tie(nullptr);
+        ios::sync_with_stdio(false);
+        cin.tie(NULL);
 
         int n;
-        std::cin >> n;
-        std::cin.ignore();
-        std::queue<int> queue;
+        cin >> n;
+        cin.ignore();
+        queue<int> queue;
         int l = 0;
-        std::string cmd;
-        std::ostringstream out;
+        string cmd;
+        ostringstream out;
 
         for (int i = 0; i < n; i++)
         {
-            std::getline(std::cin, cmd);
-            std::istringstream iss(cmd);
-            std::string cmdd;
+            getline(std::cin, cmd);
+            istringstream iss(cmd);
+            string cmdd;
             iss >> cmdd;
             
             if (cmdd == "push"){
@@ -55,6 +58,6 @@
     }
             
         }
-        std::cout << out.str();
+        cout << out.str();
         return 0;
     }
