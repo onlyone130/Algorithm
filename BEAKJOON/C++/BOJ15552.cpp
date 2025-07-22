@@ -1,18 +1,23 @@
 #include <iostream>
 
-int main(){
-    int n,a,b;
-    std::cin >> n;
-    int ary[n][2];
-    std::ios :: sync_with_stdio (0) ;
-    std::cin . tie (0) ;
+//빠른 A+B
+using namespace std;
 
-    for (int i=0; i<n; i++) {
-        for (int j=0;j<2;j++){
-            std::cin >> ary[i][j];
+int main(){
+    ios::sync_with_stdio(0);
+    cin.tie(NULL);
+
+    int n, a, b;
+    cin >> n;
+    int ary[n][2];
+
+    for(int i = 0; i < n; i++) {
+        for(int j = 0; j < 2; j++){
+            cin >> ary[i][j];
         }
     }
-    for (int i=0;i<n;i++){
-        std::cout << ary[i][0] + ary[i][1] << '\n';
+    
+    for(int i = 0; i < n; i++){
+        cout << ary[i][0] + ary[i][1] << '\n';
     }
 }
